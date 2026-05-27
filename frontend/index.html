@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Vianne Jewels</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<div class="headerBar">
+
+  <div class="brand">
+
+    <div class="brandIcon">✧</div>
+
+    <div class="brandText">
+      <h1>VIANNE JEWELS</h1>
+      <p>THE SIGNATURE OF AFFORDABLE SOPHISTICATION</p>
+    </div>
+
+  </div>
+
+  <div class="headerRight">
+    JCK 2026 · 452 ITEMS
+  </div>
+
+</div>
+
+<div class="main">
+
+  <div class="sidebar">
+
+    <div class="sectionTitle">
+      ⌕ FIND JEWEL
+    </div>
+
+    <button
+      class="scanBtn"
+      onclick="startScanner()"
+    >
+      ▣ Scan Barcode / QR Code
+    </button>
+
+    <div class="label">
+      UNIQUE CODE / JEWEL CODE
+    </div>
+
+    <input
+      type="text"
+      id="codeInput"
+      class="input"
+      placeholder="e.g. VJBR0094"
+    >
+
+    <div class="hint">
+      Type any unique code or style code
+    </div>
+
+    <div id="reader" style="display:none;"></div>
+
+    <div class="status" id="status"></div>
+
+  </div>
+
+  <div class="viewer">
+
+    <div class="emptyState" id="emptyState">
+
+      <div class="icon">💎</div>
+
+      <p>
+        Enter a jewel code or scan a barcode<br>
+        to view item details & pricing.
+      </p>
+
+    </div>
+
+    <div class="resultCard" id="resultCard">
+
+      <div class="topRow">
+
+        <div class="productTitle">
+          <h2 id="title"></h2>
+          <p id="subtitle"></p>
+        </div>
+
+        <div class="badge" id="collection"></div>
+
+      </div>
+
+      <div class="productGrid">
+
+        <div class="imageBox">
+
+          <img
+            id="productImage"
+            src=""
+            alt=""
+          >
+
+        </div>
+
+        <div>
+
+          <div class="details">
+
+            <div class="detailCard">
+              <div class="k">STYLE CODE</div>
+              <div class="v" id="styleCode"></div>
+            </div>
+
+            <div class="detailCard">
+              <div class="k">GOLD TYPE</div>
+              <div class="v" id="goldType"></div>
+            </div>
+
+            <div class="detailCard">
+              <div class="k">GROSS WT</div>
+              <div class="v" id="grossWt"></div>
+            </div>
+
+            <div class="detailCard">
+              <div class="k">NET WT</div>
+              <div class="v" id="netWt"></div>
+            </div>
+
+            <div class="detailCard">
+              <div class="k">ITEM SIZE</div>
+              <div class="v" id="itemSize"></div>
+            </div>
+
+            <div class="detailCard">
+              <div class="k">QUANTITY</div>
+              <div class="v" id="qty"></div>
+            </div>
+
+          </div>
+
+          <div class="priceBox">
+
+            <div class="t">
+              SALE PRICE
+            </div>
+
+            <div class="p" id="salePrice"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>
