@@ -1,6 +1,6 @@
 let scanner = null;
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://qr-v84n.onrender.com";
 
 const codeInput =
   document.getElementById("codeInput");
