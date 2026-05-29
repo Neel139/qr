@@ -15,6 +15,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.mount("/photos", StaticFiles(directory="photos"), name="photos")
+
 # -----------------------------
 # LOAD EXCEL
 # -----------------------------
@@ -29,8 +31,8 @@ df.columns = [str(col).strip().replace("\n", " ") for col in df.columns]
 # -----------------------------
 # SERVE PHOTOS
 # -----------------------------
-
-app.mount("/photos", StaticFiles(directory="photos"), name="photos")
+print("Excel loaded successfully")
+print(df.columns)
 
 # -----------------------------
 # HELPERS
